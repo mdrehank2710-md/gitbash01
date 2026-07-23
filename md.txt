@@ -1,0 +1,60 @@
+# Go to your home directory
+cd ~
+
+# Create a new project folder with a new name
+mkdir RehanGitProject
+
+# Enter the project folder
+cd RehanGitProject
+
+# Initialize Git repository
+git init
+
+# Configure Git username and email
+git config --global user.name "MDRehan"
+git config --global user.email "mdrehank2710@gmail.com"
+
+# Create example.txt file
+echo "welcome to git" > example.txt
+
+# Check status
+git status
+
+# Add file to staging area
+git add example.txt
+
+# Create first commit
+git commit -m "Initial Commit"
+
+# Rename branch to main
+git branch -M main
+
+# Create feature branch
+git branch feature1
+
+# Switch to feature1 branch
+git switch feature1
+
+# Add a new line to example.txt
+echo "this line is added in feature1 branch." >> example.txt
+
+# Check file content
+cat example.txt
+
+# Stage the changes
+git add example.txt
+
+# Commit feature1 changes
+git commit -m "Updated example.txt in feature1"
+
+# Switch back to main branch
+git switch main
+
+# Merge feature1 into main
+git merge feature1
+
+# Check final file content
+cat example.txt
+
+# View commit history
+git log --oneline --graph --all
